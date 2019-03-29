@@ -13,8 +13,8 @@ int main(int argc, char **argv){
 	if(argc<3){
 	printf("Usage: %s [ID] [email]\n",argv[0]);
 	return 1;
-
 	}
+
 	sprintf(poststr, "ID=%s&email=%s",argv[1],argv[2]);
 	curl_global_init(CURL_GLOBAL_ALL);
 	c = curl_easy_init();
@@ -32,5 +32,4 @@ int main(int argc, char **argv){
 	}
 	curl_global_cleanup();
 	return 0;
-
 }
