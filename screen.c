@@ -4,15 +4,16 @@
 #include "screen.h"
 
 void barChart(int db[]){
-	int;
-	for(int i=0;i<COL;i++){
+	int i;
+	for(i=0;i<COL;i++){
 		for(int j=0;j<db[i]/3;j++){
 			printf("\033[%d;%dH",j+1,i+1);
 #ifdef UNICODE					//conditional compilation
 			printf("%s",BAR);
 #else
 			printf("%c",'*');
-#endif		}
+#endif
+		}
 	}
 }
 void clearScreen(void){
