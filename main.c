@@ -2,12 +2,15 @@
 #include<stdlib.h>			// for random numbers
 #include<time.h>			// for randomization (using system time)
 #include"screen.h"
+#include <signal.h>
 #include"sound.h"
 void main(void){
 	FILE *f;
-	short sd[80000];
+	short sd[RATE];
 	for(;;){
-	system(RCMD);
+	int ret = system(RCMD);
+	if (ret == SIGINT) break;
+	//system(RCMD);
 	f = fopen("test.wav","r");
 	if(f==NULL){
 		printf("cannot open the file\n");
@@ -23,12 +26,12 @@ void main(void){
 	struct WAVHDR hdr;
 	fread(&hdr, sizeof(hdr),1,f);	//read WAV header
 	fread(&sd,sizeof(sd),1,f); //read wav data   
- fclose(f);	
-displayWAVHDR(hdr);
-//displayWAVDATA();
+	 fclose(f);	
+	displayWAVHDR(hdr);
+	displayWAVDATA(sd);
 }
 	resetColors();
-	getchar();
+//	getchar();
 //	printf("Message from main\n");
 //	resetColors();
 //	printf("Message from main");
