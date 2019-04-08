@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include<stdlib.h>			// for random numbers
-#include<time.h>			// for randomization (using system time)
+//#include<stdlib.h>			// for random numbers
+//#include<time.h>			// for randomization (using system time)
 #include"screen.h"
 #include <signal.h>
 #include"sound.h"
