@@ -28,3 +28,4 @@ struct WAVHDR{
 void displayWAVHDR(struct WAVHDR);
 void displayWAVDATA(short []);
 void showID(char *, char *);
+void testTone(int ch, int fL,int fR,float dur);
