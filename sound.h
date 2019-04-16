@@ -1,6 +1,6 @@
 // constants definition
 //#define DEBUG	//in developing mode or not, conditional compilation
-
+#define PI 3.14159
 #define RATE 16000
 #define DUR 1
 #define RCMD "arecord  -r16000 -c1 -f S16_LE -d1 -q test.wav"
