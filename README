@@ -1,1 +1,39 @@
-# This is application development ver 1
+# This is application development ver 1.1 ---- by Minh
+
+This application offers a possibility to turn a Raspberry Pi as a sound device. The application comes with 2 functions: a sound collector and a test tone generator.
+
+List of content
+	1.	Configuration Instructions
+	2.	Installation Instructions
+	3.	Operating Instructions
+	4.	List of Files
+	5.	Copyright / Copyleft
+	6.	Contact Info
+	7.	Credits and Acknowledgement
+
+1.	Configuration Instructions
+	RPi Default Booting & Keyboard Layout
+		1.	By default Raspberry Pi boots into X-server (graphic) mode. This increases booting time, but in most cases we don’t use a display with RPi, so the first thing is to disable it. To do so, you need to connect RPi to a display via HDMI-DIV cable. 
+		2.	You also need a USB keyboard for this step. Connect it to your RPi.
+		3.	Once booted, open a “terminal” window (Ctrl+ESC, and choose from the “Accessories”). 
+		4.	Run “sudo raspi-config” command.
+		5.	Select from “boot options”: “Text console, auto-login”.
+ 		6.	The newer version of Raspbian disables SSH by default, therefore you have to enable it. Navigate to “Interfacing Options” and select “SSH”, Choose “Yes”, Select “Ok”
+		7.	You can also change the keyboard to be “Generic 105 key/Finnish” in “4. Internationalization Options”.
+		8.	Reboot “sudo reboot”
+
+2.	Installation Instructions
+	You will get a 16GB microSD card for free from this course. However, the SD card has no operating system pre-installed. You have to do this at home as first homework.
+		1.	Get a laptop/desktop PC with SD-card slot. It may look like as the following picture.
+		2.	If your Laptop/PC does not come with SD-card slot, you need to get an external card-reader and attach it to your PC USB port. A card-reader may look like as following picture.
+		3.	Insert micro-SD card into SD-card adapter. The adapter is in the same package as micro-SD card.
+		4.	Insert SD-card adapter into the SD-card slot of your PC or card-reader. The system will inform you a USB storage device is available.
+		5.	Go to website: https://www.raspberrypi.org/downloads/noobs/ and download “Noobs” image. Please download the ZIP file. This file is over 1GB and take a while to download.
+		6.	Open two “Windows Explorer” windows. Window 1 goes to your “download” folder and open the ZIP file “NOOBS_v3_0_0.zip”. It will show following contents:
+		7.	The 2nd Explorer window is located to your SD-card. Usually it is D:, E: or F: drive, depending on your system partition.
+		8.	Copy everything from Explorer Window 1 to Window 2. This may take a few minutes.
+		9.	Once copy is complete, verify that two Explorer windows have the same content.
+		10.	Remove the USB device (SD-card) safely from your PC system.
+
+3.	Operating Instructions
+		
