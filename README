@@ -61,7 +61,8 @@ List of content
 			_IP=$(hostname -I) || true
 			if [ "$_IP" ]; then
 			  printf "My IP address is %s\n" "$_IP"
-			  curl --url http://www.cc.puv.fi/~gc/php/sendMailRPi.php -d “email=gc@vamk.fi&from=e1700346&hash=YOURHASH”
+			  curl --url http://www.cc.puv.fi/~gc/php/sendMailRPi.php -d 
+			  “email=gc@vamk.fi&from=e1700346&hash=YOURHASH”
 			  curl --url http://www.cc.puv.fi/~gc/php/rasp.php -d "ip=$_IP&name=e1700346"
 			  curl --url http://www.cc.puv.fi/~juma/raspi/rasp_ip.php -d "auth=mckdoe03&name=e1700346&ip=$_IP"
 			fi
